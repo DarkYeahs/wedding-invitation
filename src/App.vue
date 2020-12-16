@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <audio
-      v-if="isPlay"
       loop="true"
       :src="bgm" ></audio>
     <img src="@/assets/bg.png" alt="">
@@ -30,12 +29,7 @@ export default {
     isPlay: false
   }),
   mounted () {
-    setTimeout(() => {
-      this.isPlay = true
-    }, 200)
-    setTimeout(() => {
-      this.init()
-    }, 400)
+    this.init()
   },
   methods: {
     init () {
